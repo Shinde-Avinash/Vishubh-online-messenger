@@ -127,11 +127,8 @@ const Sidebar = () => {
                   {currentUser?.avatar}
                 </div>
                 <div className="flex-1 text-left min-w-0">
-                  <h2 className="font-semibold text-gray-900 dark:text-white truncate text-sm">{currentUser?.username}</h2>
-                  <p className="text-xs text-green-500 flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-1"></span>
-                    Online
-                  </p>
+                  <h2 className="font-semibold text-gray-900 dark:text-white truncate text-sm">&nbsp;{currentUser?.username}</h2>
+                  
                 </div>
                 <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform ${showProfileMenu ? 'rotate-180' : ''}`} />
               </button>
@@ -140,8 +137,8 @@ const Sidebar = () => {
               {showProfileMenu && (
                 <div className={`absolute top-full left-0 right-0 mt-2 rounded-lg shadow-lg border py-2 z-50 ${darkMode ? 'bg-slate-800 border-gray-700' : 'bg-white border-gray-200'}`}>
                   <div className={`px-4 py-2 border-b ${darkMode ? 'bg-slate-800 border-gray-700' : 'bg-white border-gray-200'}`}>
-                    <p className={`font-semibold truncate ${darkMode ? 'text-white' : 'text-black'}`}>{currentUser?.username}</p>
-                    <p className={`text-xs truncate ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{currentUser?.email}</p>
+                    <p className={`font-semibold truncate ${darkMode ? 'text-white' : 'text-black'}`}>&nbsp;{currentUser?.username}</p>
+                    <p className={`text-xs truncate ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>&nbsp;{currentUser?.email}</p>
                   </div>
                   
                   <button
@@ -152,7 +149,7 @@ const Sidebar = () => {
                     className={`w-full px-4 py-2 text-left flex items-center space-x-3 transition-colors ${darkMode ? 'hover:bg-slate-700 text-white' : 'hover:bg-gray-50 text-black'}`}
                   >
                     <Settings className="w-4 h-4" />
-                    <span className="text-sm">Settings</span>
+                    <span className="text-sm">&nbsp;Settings</span>
                   </button>
 
                   <button
@@ -160,7 +157,7 @@ const Sidebar = () => {
                     className={`w-full px-4 py-2 text-left flex items-center space-x-3 transition-colors ${darkMode ? 'hover:bg-slate-700 text-white' : 'hover:bg-gray-50 text-black'}`}
                   >
                     {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-                    <span className="text-sm">{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
+                    <span className="text-sm">&nbsp;{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
                   </button>
 
                   <div className={`border-t mt-2 pt-2 ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
@@ -169,7 +166,7 @@ const Sidebar = () => {
                       className={`w-full px-4 py-2 text-left flex items-center space-x-3 transition-colors ${darkMode ? 'hover:bg-slate-700 text-red-400' : 'hover:bg-gray-50 text-red-600'}`}
                     >
                       <LogOut className="w-4 h-4" />
-                      <span className="text-sm font-medium">Logout</span>
+                      <span className="text-sm font-medium">&nbsp;Logout</span>
                     </button>
                   </div>
                 </div>
@@ -247,8 +244,8 @@ const Sidebar = () => {
                         {request.avatar || '👤'}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="font-medium text-gray-900 dark:text-white truncate">{request.username}</p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{request.email}</p>
+                        <p className="font-medium text-gray-900 dark:text-white truncate">&nbsp;{request.username}</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 truncate">&nbsp;{request.email}</p>
                       </div>
                     </div>
                     <div className="flex space-x-2">
@@ -324,8 +321,8 @@ const Sidebar = () => {
                         {user.avatar || '👤'}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="font-medium text-gray-900 dark:text-white truncate">{user.username}</p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{user.email}</p>
+                        <p className="font-medium text-gray-900 dark:text-white truncate">&nbsp;{user.username}</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 truncate">&nbsp;{user.email}</p>
                       </div>
                     </div>
                     <div className="flex-shrink-0 ml-2">
@@ -392,8 +389,8 @@ const Sidebar = () => {
                       }`} />
                     </div>
                     <div className="flex-1 text-left min-w-0">
-                      <h4 className="font-medium text-gray-900 dark:text-white truncate">{friend.username}</h4>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{friend.email}</p>
+                      <h4 className="font-medium text-gray-900 dark:text-white truncate">&nbsp;{friend.username}</h4>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 truncate">&nbsp;{friend.email}</p>
                     </div>
                     {friend.unread_count > 0 && (
                       <span className="flex-shrink-0 px-2 py-1 bg-blue-500 text-white text-xs rounded-full font-semibold">
