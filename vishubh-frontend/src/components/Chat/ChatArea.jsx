@@ -124,12 +124,9 @@ const ChatArea = () => {
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-lg">
                 {selectedUser.avatar || '👤'}
               </div>
-              <div className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white dark:border-gray-800 ${
-                selectedUser.status === 'online' ? 'bg-green-500' : selectedUser.status === 'away' ? 'bg-yellow-500' : 'bg-gray-400'
-              }`} />
-            </div>
+              </div>
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white">{selectedUser.username}</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white">&nbsp;{selectedUser.username}</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 {selectedUser.status === 'online' ? '🟢 Active now' : selectedUser.status === 'away' ? '🟡 Away' : '⚫ Offline'}
               </p>
